@@ -1,3 +1,26 @@
+#include<iostream>
+using namespace std;
+struct array
+{
+	int data;
+	int counter;
+	int next_multiple;
+};
+
+int min(struct array *ar, int k)
+{
+	int i;
+	int min = ar[0].next_multiple;
+	for(i = 1; i < k; i++)
+	{
+		if(ar[i].next_multiple < min)
+		{
+			min = ar[i].next_multiple;
+		}
+	}
+	return min;
+}
+
 int main()
 {
 	int N, multiple_2, multiple_3, multiple_5, next_ugly, i, k, j ;
